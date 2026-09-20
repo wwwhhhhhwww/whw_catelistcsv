@@ -1,7 +1,7 @@
 # 目标：造 9 行 CSV(topology,osda,temp,success) → 读回 → 按拓扑统计 → 打印
 
 
-with open('data.csv','w',encoding='utf-8')as f:
+with open('data_1.csv','w',encoding='utf-8')as f:
     f.write('topology,osda,temp,success\n')
     f.write('MFI,TPAOH,170,1\n')
     f.write('MFI,TPAOH,165,1\n')

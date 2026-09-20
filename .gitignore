@@ -1,0 +1,9 @@
+# 虚拟环境：机器本地的东西，绝不共享
+.venv/
+
+# Python 运行缓存
+__pycache__/
+*.pyc
+
+# PyCharm 工程配置
+.idea/
