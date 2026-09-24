@@ -54,5 +54,9 @@ print(df[(df['temp']>170) & (df['success']==1)])     #提示后修改的有修�
 #[r for r in rows if int(r[2]) > 170 and r[3] == '1']   # 手写：也是那 2 行
 #可能错的三点（由ai提供）1.边界问题，等于170度的没有统计可能会导致漏掉很多数据（此边界为人为决定）2.静默失效  success==1  但可能有1.0等导致不被统计 3.空值  数据存在空值导致很多未被统计
 
-
+#B7a  pandas清洗
+dirty=pd.read_csv('dirty_data.csv')
+print(dirty)
+print(dirty.isna().sum())
+print(dirty.dropna())
 
