@@ -28,7 +28,7 @@ for topo in groups:
     else:
         rule[topo]='0'
 
-print(rule['XYZ'])
+print(rule)
 
 
 test = rows[-3:]
