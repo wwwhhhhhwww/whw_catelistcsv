@@ -29,7 +29,7 @@ print(pred)
 hit=(test['success']==pred)
 print(hit)
 print(f"正确率为{hit.mean():.2f}")
-
+#B6a测试
 rule_jia = {'MFI': 1}                              # 故意只留 MFI
 print(df.tail(3)['topology'].map(rule_jia))    # 看它给什么
 try:
@@ -37,8 +37,12 @@ try:
 except KeyError as e:      # as e 把错误对象接住
     print('捕获到:', e)     # 打印它，而不是打印一句没信息量的"报错"
 
-
-
+#B6b
+#print(df['temp']>170 & df['success']==1)
+print((df['temp']>170) & (df['success']==1))   #没有过滤筛选作用
+print(df[(df['temp']>170) & (df['success']==1)])     #提示后修改的有修改过滤版本
+#[r for r in rows if int(r[2]) > 170 and r[3] == '1']   # 手写：也是那 2 行
+#可能错的三点（由ai提供）1.边界问题，等于170度的没有统计可能会导致漏掉很多数据（此边界为人为决定）2.静默失效  success==1  但可能有1.0等导致不被统计 3.空值  数据存在空值导致很多未被统计
 
 
 
