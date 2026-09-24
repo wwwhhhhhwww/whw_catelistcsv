@@ -30,6 +30,12 @@ hit=(test['success']==pred)
 print(hit)
 print(f"正确率为{hit.mean():.2f}")
 
+rule_jia = {'MFI': 1}                              # 故意只留 MFI
+print(df.tail(3)['topology'].map(rule_jia))    # 看它给什么
+try:
+    print(rule_jia['FAU'])
+except KeyError as e:      # as e 把错误对象接住
+    print('捕获到:', e)     # 打印它，而不是打印一句没信息量的"报错"
 
 
 
