@@ -60,3 +60,15 @@ print(dirty)
 print(dirty.isna().sum())
 print(dirty.dropna())
 
+#B7b
+dirty['temp'] = pd.to_numeric(dirty['temp'], errors='coerce')   # 转不动 → NaN
+print(dirty.isna().sum())                                       # 数空
+print(dirty.dropna())                                           # 丢掉含空的行
+
+
+#B8
+print(df.dtypes)
+print(df['topology'].map({'BEA':0, 'FAU':1, 'MFI':2}))
+print(pd.get_dummies(df, columns=['topology']))
+
+
